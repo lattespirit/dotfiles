@@ -1,0 +1,111 @@
+set ignorecase
+let mapleader = ","
+
+" Don't Show Number Line
+set nonu
+
+" Mapping ESC key
+imap jj <esc>
+vmap ; vv
+
+" Save Files
+nmap ,w :action SaveAll<CR>
+
+" Mappings of Jumping
+nmap <A-j> <C-f>
+nmap <A-k> <C-b>
+
+" Edit Configuration File
+nnoremap <leader>ev :e ~/.ideavimrc<CR>
+
+" Source Configuration File
+nnoremap <leader>sv :source ~/.ideavimrc<CR>
+
+" Toggle LineNumbers
+" nmap <leader>l :action EditorToggleShowLineNumbers<CR>
+
+" Show Tabs on Top
+nmap <leader>tt :action TabsPlacementTop<CR>
+" Close Tabs
+nmap <leader>tn :action TabsPlacementNone<CR>
+" Hide Tabs
+nmap <leader>tn :action TabsPlacementNone<CR>
+
+" Toggle StatusBar
+nmap <leader>a :action ViewStatusBar<CR>
+
+" Join Lines
+nmap J :action EditorJoinLines<CR>
+
+" ======================================== Window - Start========================================
+
+" Clone a Window Horizontally
+nmap <leader>sp :action SplitHorizontally<CR><C-j>
+" Clone a Window Vertically
+nmap <leader>vsp :action SplitVertically<CR><C-l>
+" Move Current Tab Right
+nmap L :action MoveTabRight<CR>
+" Move Current Tab Down
+nmap J :action MoveTabDown<CR>
+
+" Move Curent Cursor to Left
+nmap <C-h> :action VimWindowLeft<CR>
+" Move Curent Cursor to Down
+nmap <C-j> :action VimWindowDown<CR>
+" Move Curent Cursor to Up
+nmap <C-k> :action VimWindowUp<CR>
+" Move Curent Cursor to Right
+nmap <C-l> :action VimWindowRight<CR>
+
+" UnsplitAll Window
+nmap :on :action UnsplitAll<CR>
+
+" Close Current Window
+nmap q :action CloseContent<CR>
+nmap <c-w> :action CloseContent<CR>
+" Reopen Prev Closed Window
+nmap X :action ReopenClosedTab<CR>
+" Close Ohter Windows
+" nmap :on :action VimWindowOnly<CR>
+
+" ======================================== Window - End========================================
+
+" Search Global Symbol
+nmap R :action GotoSymbol<CR>
+
+" Go to current definition
+nmap <leader>g :action GotoDeclaration<CR>
+
+" Go Back previous definition
+nmap <leader>G :action Back<CR>
+
+" List File function and symbole
+nmap r :action FileStructurePopup<CR>
+
+" Open RecentFiles
+nmap <enter> :action RecentFiles<CR>
+nmap e :action RecentFiles<CR>
+
+" Expand Selection
+nmap <space> :action EditorSelectWord<CR>
+
+" Comment Line
+nmap <BS> :action CommentByLineComment<CR>
+
+" Rerun Last Test
+nmap T :action Run<CR>
+
+" Hide Active Window
+nnoremap <ESC> :action HideActiveWindow<CR>
+
+" Reveal file in project
+nnoremap <M-2> :action SelectInProjectView<CR>
+
+" Toggle Terminal
+nnoremap <M-3> :action ActivateTerminalToolWindow<CR>
+
+" Enable Multiple Cursor Feature
+set multiple-cursors
+
+" Enable Surround
+set surround
