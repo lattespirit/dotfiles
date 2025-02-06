@@ -31,3 +31,6 @@ brew bundle --file ./Brewfile
 
 # Set macOS preferences - we will run this last because this will reload the shell
 # source ./.macos
+
+# Use stow to manage all config files
+stow -v --target=$HOME */ 
